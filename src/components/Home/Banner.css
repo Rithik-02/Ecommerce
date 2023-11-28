@@ -1,0 +1,87 @@
+.banner {
+  background-color: #211c24;
+  padding: 2rem 6rem 0rem 6rem;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+}
+
+.bannerTextContainer {
+  padding-right: 2rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.proText {
+  font-size: 3rem;
+  color: #636066;
+  margin: 0;
+}
+.BannerHeading {
+  font-size: 12rem;
+  color: #ffff;
+  margin: 0;
+}
+.subHeading {
+  font-size: 2rem;
+  color: #636066;
+  margin-bottom: 4rem;
+}
+
+.shopNowBtn {
+  display: inline-block;
+  background-color: #211c24;
+  color: #ffff;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.shopNowBtn:hover {
+  background-color: #39313d;
+}
+@media (max-width: 890px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .bannerTextContainer {
+    text-align: center;
+    padding: 4rem 0rem;
+  }
+  .phoneImgContainer {
+    justify-self: center;
+  }
+}
+@media (max-width: 750px) {
+  .BannerHeading {
+    font-size: 10rem;
+  }
+  .proText {
+    font-size: 2.5rem;
+  }
+  .subHeading {
+    font-size: 1.7rem;
+  }
+  .iphoneImg {
+    width: 330px;
+  }
+}
+@media (max-width: 460px) {
+  .banner {
+    justify-content: center;
+  }
+  .BannerHeading {
+    font-size: 8rem;
+  }
+  .proText {
+    font-size: 2rem;
+  }
+  .subHeading {
+    font-size: 1.2rem;
+  }
+  .iphoneImg {
+    width: 290px;
+  }
+}

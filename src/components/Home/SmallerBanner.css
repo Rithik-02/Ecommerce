@@ -1,0 +1,128 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  background-color: #fff;
+  color: #ababab;
+  font-weight: 500;
+}
+.a,
+.c,
+.b,
+.d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+.a {
+  grid-column: 1 / span 2;
+}
+.b {
+  background-color: #ededed;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+.c {
+  background-color: #ededed;
+  grid-column: 1;
+  grid-row: 2;
+}
+.d {
+  background-color: #353535;
+  color: #fff;
+  grid-column: 2;
+  grid-row: 2;
+}
+.bannerproductName {
+  color: black;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+}
+.productContent {
+  padding: 2rem;
+}
+.visionName {
+  color: #fff;
+}
+.visioncontent {
+  color: #ababab;
+}
+.macBtn {
+  display: inline-block;
+  background-color: #ededed;
+  margin-top: 2rem;
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+.macBtn:hover {
+  background-color: #d3d3d3;
+}
+@media screen and (max-width: 1040px) and (min-width: 461px) {
+  .a > img,
+  .b > img {
+    width: 20rem;
+    min-width: 10rem;
+  }
+  .c > img,
+  .d > img {
+    width: 7rem;
+    min-width: 5rem;
+  }
+  .a,
+  .b,
+  .c,
+  .d {
+    font-size: 1rem;
+    gap: 0.8rem;
+  }
+  .productName {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .a {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .b {
+    grid-column: 1;
+    grid-row: 4;
+    flex-direction: column-reverse !important;
+  }
+
+  .c {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .d {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .a,
+  .c,
+  .b,
+  .d {
+    padding: 2rem 0rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+}

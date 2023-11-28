@@ -1,0 +1,39 @@
+import React, { useState } from "react";
+import Filter from "./Filter";
+import HomeProduct from "../Home/HomeProduct";
+import Header from "../Header";
+import Footer from "../Footer";
+import "./ProductPage.css";
+import Product from "./Product";
+import FilterIcon from "../../assets/Filter/Filters.svg";
+export default function ProductPage() {
+  const [isFilteropen, setIsFilterOpen] = useState(false);
+  
+  const filterHandler = () => {
+    setIsFilterOpen(!isFilteropen);
+    console.log(isFilteropen);
+    if (!isFilteropen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      {
+        document.body.style.overflow = "auto";
+      }
+    }
+  };
+  return (
+    <div>
+      <div className="productPage">
+        <div className="filterBtn" onClick={filterHandler}>
+          <p>Filters</p>
+          <img src={FilterIcon} />
+        </div>
+        <div className={`${isFilteropen ? "open" : "filterComponent "}`}>
+          <Filter />
+        </div>
+        <div className="productComponent">
+          <Product />
+        </div>
+      </div>
+    </div>
+  );
+}

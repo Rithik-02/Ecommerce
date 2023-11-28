@@ -1,0 +1,239 @@
+.paymentContainer {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 7.2rem;
+}
+.summary {
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 7px;
+  padding: 2rem;
+}
+.summary > p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.addedItems {
+  background-color: #f6f6f6;
+  border-radius: 1.3rem;
+  padding: 1.6rem;
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+  height: 8rem;
+  gap: 1.5rem;
+  align-items: center;
+}
+.addedItems > img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.addedItems > p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.addedItems > p:nth-child(3) {
+  font-weight: 600;
+}
+.payHead {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.paySubHead {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.payCal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.payCalList {
+  color: #7a7a7a;
+}
+.payment {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2.1rem;
+}
+.payment > img {
+  margin: 2rem 0;
+}
+.payment > p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.payment > input,
+.inputDate > input {
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 4px;
+  height: 3.5rem;
+  outline: none;
+  padding: 1rem;
+  border: 1px solid #f0f0f0;
+}
+.payment > input::placeholder,
+.inputDate > input::placeholder {
+  color: #aaaaaa;
+}
+.payBtn,
+.backBtn {
+  width: 45%;
+  text-align: center;
+  display: inline-block;
+  background-color: #211c24;
+  color: #ffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1.6rem 5.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.payBtn:hover {
+  background-color: #39313d;
+}
+.backBtn {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+}
+.backBtn:hover {
+  background-color: rgb(238, 238, 238);
+}
+.payBtn.disabled {
+  color: #999;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.payBtncontainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 500px;
+  text-align: center;
+}
+
+.popup p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+@media (max-width: 770px) {
+  .paymentContainer {
+    gap: 4rem;
+    padding: 3.6rem;
+  }
+  .summary {
+    width: 33rem;
+    border-radius: 7px;
+    padding: 1.4rem;
+  }
+  .summary > p:nth-child(1) {
+    font-size: 1.4rem;
+  }
+  .addedItems {
+    padding: 1rem;
+    width: 27rem;
+    height: 6rem;
+    gap: 1rem;
+  }
+  .addedItems > img {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .addedItems > p {
+    font-size: 1.2rem;
+  }
+  .addedItems > p:nth-child(3) {
+    font-weight: 600;
+  }
+  .payHead {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .paySubHead {
+    font-size: 1.3rem;
+  }
+  .payCal {
+    font-size: 1.3rem;
+  }
+  .payment {
+    width: 33rem;
+  }
+  .payment > p {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  .payment > input,
+  .inputDate > input {
+    font-size: 1.2rem;
+  }
+
+  .payBtn,
+  .backBtn {
+    font-size: 1.3rem;
+    padding: 1.4rem 5.2rem;
+  }
+}
+@media (max-width: 430px) {
+  .paymentContainer {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1rem;
+    align-items: center;
+  }
+  .payment {
+    margin-bottom: 4rem;
+    width: 33rem;
+  }
+  .summary {
+    width: 33rem;
+  }
+  .addedItems {
+    padding: 1rem;
+    width: 30rem;
+    height: 6rem;
+  }
+  .inputDate {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 321px) {
+  .payment {
+    margin-bottom: 4rem;
+    width: 28rem;
+  }
+  .summary {
+    width: 28rem;
+  }
+  .addedItems {
+    padding: 1rem;
+    width: 25rem;
+    height: 5rem;
+  }
+}

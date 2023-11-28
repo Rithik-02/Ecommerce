@@ -1,0 +1,62 @@
+.priceFilter > hr {
+  margin: 1rem 0rem 2rem;
+  border-top: 1px solid #b4b4b4;
+}
+.priceHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.price-dropdown {
+  font-size: 2rem;
+}
+
+.priceDropDownContent {
+  display: flex;
+  justify-content: space-between;
+}
+.inputPrice {
+  margin-top: 1.5rem;
+  width: 10rem;
+  height: 4rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 3px;
+}
+.fromInput > p,
+.toInput > p {
+  color: #acacac;
+  font-size: 1.6rem;
+}
+.priceRange {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.toInput > p {
+  text-align: right;
+}
+.filterApplyBtn {
+  width: 15rem;
+
+  display: inline-block;
+  background-color: #211c24;
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 4rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.filterApplyBtn:hover {
+  background-color: #39313d;
+}
+.applyBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+@media (max-width: 430px) {
+}

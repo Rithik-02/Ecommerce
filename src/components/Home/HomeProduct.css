@@ -1,0 +1,100 @@
+.homeCardComponent {
+  padding: 8rem 16rem 8rem 16rem;
+}
+.homeCardHeading {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3.2rem;
+}
+.homeCardHeadingText {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #666666;
+  cursor: pointer;
+}
+.underline {
+  color: black;
+  text-decoration: underline;
+}
+.homeCard {
+  width: 25rem;
+  border-radius: 9px;
+  padding: 2.4rem 1.6rem;
+  background-color: #f6f6f6;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.homeCardItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.homeProductName {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+.homeProductPrice {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.buyNowHomeBtn {
+  display: inline-block;
+  background-color: #211c24;
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 3.5rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.buyNowHomeBtn:hover {
+  background-color: #39313d;
+}
+@media (max-width: 768px) {
+  .homeCard {
+    width: 15rem;
+    padding: 1.8rem 1rem;
+  }
+  .homeCardComponent {
+    padding: 2rem;
+  }
+  .homeProdImg {
+    width: 10rem;
+  }
+  .homeProductName {
+    font-size: 1.3rem;
+  }
+  .buyNowHomeBtn {
+    text-align: center;
+    width: 12rem;
+    font-size: 1.2rem !important;
+    padding: 0.5rem !important;
+  }
+  .homeCardHeadingText {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .homeCardHeading {
+    justify-content: center;
+  }
+  .homeProductPrice {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .homeCardItems {
+    justify-content: space-around;
+  }
+  .homeCardHeadingText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}

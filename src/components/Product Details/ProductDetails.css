@@ -1,0 +1,280 @@
+.productDetails {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 11.2rem 16rem;
+}
+.productDetailImage {
+  display: flex;
+  gap: 5rem;
+}
+.sideImages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sideImages > img {
+  width: 5rem;
+}
+.mainImage {
+  align-self: center;
+}
+.productDetailsSpec {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.colorSelection,
+.gbDetails,
+.productSpecCardDetails,
+.productDeliveryDetails,
+.specCard,
+.deliveryDetails {
+  display: flex;
+  align-items: center;
+}
+.productDetailName {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.productDetailPrice {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+.colorSelection {
+  gap: 0.7rem;
+}
+.colorSelection > P {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.colorSelection > span {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+}
+.colorSelection > span:nth-child(2) {
+  background-color: black;
+}
+.colorSelection > span:nth-child(3) {
+  background-color: #781dbc;
+}
+.colorSelection > span:nth-child(4) {
+  background-color: #e10000;
+}
+.colorSelection > span:nth-child(5) {
+  background-color: #e1b000;
+}
+.colorSelection > span:nth-child(6) {
+  background-color: #e8e8e8;
+}
+.gbDetails {
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+.gbDetails > span {
+  width: 9rem;
+  border: 1px solid black;
+  padding: 1.6rem 2.4rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.productSpecCardDetails {
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.specCard {
+  width: 18rem;
+  gap: 1rem;
+  background-color: #f4f4f4;
+  padding: 1.6rem;
+  border-radius: 7px;
+}
+.specCardhead {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #a7a7a7;
+  margin-bottom: 3px;
+}
+.specCardSubHead {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #4e4e4e;
+}
+.productSummary > p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #6c6c6c;
+}
+.addToCartBtn,
+.addToWish {
+  display: inline-block;
+  background-color: #211c24;
+  color: #ffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1.6rem 5.6rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.addToCartBtn:hover {
+  background-color: #39313d;
+}
+.addToWish {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+}
+.addToWish:hover {
+  background-color: rgb(238, 238, 238);
+}
+.detailsBtn {
+  display: flex;
+  gap: 3rem;
+}
+.deliveryImg {
+  background-color: #f6f6f6;
+  padding: 1.6rem;
+  border-radius: 1.1rem;
+}
+.deliveryDetails {
+  font-size: 1.4rem;
+  font-weight: 600;
+  gap: 1rem;
+  color: #717171;
+}
+.deliveryDetails > div > span {
+  color: black;
+}
+.deliveryDetails > div > p {
+  margin-bottom: 1rem;
+}
+.productDeliveryDetails {
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+@media (max-width: 1024px) {
+  .productDetails {
+    gap: 4rem;
+    padding: 5rem 4rem;
+  }
+  .sideImages {
+    justify-content: flex-start;
+  }
+  .sideImages > img {
+    width: 2.5rem;
+  }
+  .mainImage {
+    align-self: flex-start;
+  }
+  .mainImage > img {
+    width: 35rem;
+  }
+  .gbDetails > span {
+    width: 7rem;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .specCard {
+    width: 15rem;
+    padding: 1rem;
+  }
+  .specCardhead {
+    font-size: 1.2rem;
+  }
+  .specCardSubHead {
+    font-size: 1rem;
+  }
+  .productSummary > p {
+    font-size: 1.2rem;
+  }
+  .addToCartBtn,
+  .addToWish {
+    font-size: 1.2rem;
+    padding: 1.2rem 4rem;
+  }
+
+  .deliveryImg {
+    padding: 1rem;
+  }
+  .deliveryDetails {
+    font-size: 1.2rem;
+  }
+  .productDetailName {
+    font-size: 3rem;
+  }
+  .productDetailPrice {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 425px) {
+  .productDetails {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    align-items: center;
+  }
+  .mainImage > img {
+    width: 22rem;
+  }
+  .sideImages {
+    margin-top: 1rem;
+  }
+  .gbDetails {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .gbDetails > span {
+    width: 7.4rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .specCard {
+    width: 17rem;
+    height: 6rem;
+    padding: 0.8rem;
+    gap: 5px;
+  }
+  .productSpecCardDetails {
+    justify-content: space-between;
+  }
+  .detailsBtn {
+    flex-direction: column;
+  }
+  .productDeliveryDetails {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .deliveryDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+  .deliveryDetails > div {
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .specCard {
+    width: 14.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .gbDetails > span:nth-child(4) {
+    margin-top: 1.5rem;
+  }
+  .specCard {
+    width: 13rem;
+  }
+}

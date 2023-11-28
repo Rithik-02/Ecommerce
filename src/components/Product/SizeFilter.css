@@ -1,0 +1,29 @@
+.buildHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.memoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.memoryList > label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.SizeFilter > hr {
+  margin: 1rem 0rem 2rem;
+  border-top: 1px solid #b4b4b4;
+}
+.check:checked {
+  accent-color: black;
+}
+.check {
+  transform: scale(1.5);
+}

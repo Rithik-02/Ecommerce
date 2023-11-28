@@ -1,0 +1,74 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  height: 75rem;
+  overflow-y: scroll;
+}
+.productCard {
+  height: 35rem;
+  width: 25rem;
+  border-radius: 9px;
+  padding: 2.4rem 1.6rem;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.productName {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+.productPrice {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.productbuyNowHomeBtn {
+  display: inline-block;
+  background-color: #211c24;
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 4rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.productbuyNowHomeBtn:hover {
+  background-color: #39313d;
+}
+@media (max-width: 768px) {
+  .productCard {
+    width: 15rem;
+    height: 26rem;
+    padding: 1.8rem 1rem;
+  }
+
+  .homeProdImg {
+    width: 10rem;
+  }
+  .productName {
+    font-size: 1.3rem;
+  }
+  .productbuyNowHomeBtn {
+    text-align: center;
+    width: 12rem;
+    font-size: 1.2rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .productPrice {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 321px) {
+  .filterBtn {
+    margin: auto;
+  }
+}

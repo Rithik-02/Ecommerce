@@ -1,0 +1,42 @@
+.productPage {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  padding: 5rem 10rem;
+  gap: 5rem;
+}
+.filterBtn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .productPage {
+    padding: 3rem;
+  }
+}
+@media (max-width: 430px) {
+  .filterBtn {
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    gap: 4rem;
+    border: 1px solid #dddddd;
+    margin-left: 1.5rem;
+  }
+  .productPage {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 3rem;
+  }
+  .filterComponent {
+    display: none;
+  }
+  .filterComponent .open {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
+}
