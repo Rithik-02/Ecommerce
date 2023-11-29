@@ -56,12 +56,43 @@
 .menuBtn {
   display: none;
 }
-
+.countCart {
+  position: relative;
+  font-size: 1.8rem;
+  color: black;
+}
+.countIcon {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  background-color: black;
+  color: #fff;
+  padding: 3px 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
 @media (max-width: 950px) {
   .header {
     padding: 1.6rem 2rem;
   }
-
+  .countCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .countIcon {
+    position: initial;
+    bottom: 1.5rem;
+    left: 2rem;
+    background-color: black;
+    color: #fff;
+    padding: 3px 4px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+  }
   .searchContainer {
     margin: 1rem 0;
   }

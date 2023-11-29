@@ -87,7 +87,7 @@ export const ProductData = [
   {
     id: 11,
     img: Iphone142,
-    name: "Apple iPhone 11 128GB White",
+    name: "Poco iPhone 11 128GB White",
 
     price: 510,
   },

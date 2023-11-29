@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 import Close from "../assets/Address/Close.svg";
@@ -15,7 +15,15 @@ export default function Cart() {
   if (subTotal > 0) {
     dispatch(addTotal(subTotal));
   }
+  const removeHandler = (product) => {
+    // Handle removal outside the rendering phase
+    handleRemove(product);
+  };
 
+  const handleRemove = (product) => {
+    // Dispatch the action to remove from cart
+    dispatch(removeFromCart(product));
+  };
   const quantiyIncrease = (data) => {
     dispatch(addToCart(data));
   };
@@ -43,11 +51,15 @@ export default function Cart() {
                   </div>
                   <p className="cartItemPrice">${data.price * data.quantity}</p>
                   <button>
-                    <img src={Close} />
+                    <img
+                      src={Close}
+                      alt="icon"
+                      onClick={() => removeHandler(data)}
+                    />
                   </button>
                 </div>
               ))}
-            </div>{" "}
+            </div>
           </div>
         ) : (
           <p className="cartEmptyText">Cart is Empty</p>

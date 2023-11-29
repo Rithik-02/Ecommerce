@@ -45,7 +45,10 @@ export default function Header() {
             {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
           </span>
           <Link to="/cart">
-            <span>{menuOpen ? "Cart" : <img src={Cart} alt="icon" />}</span>
+            <span className="countCart">
+              {menuOpen ? "Cart" : <img src={Cart} alt="icon" />}
+              <span className="countIcon">3</span>
+            </span>
           </Link>
           <span>{menuOpen ? "Account" : <img src={User} alt="icon" />}</span>
         </div>

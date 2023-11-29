@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
+    cartCount: 0,
     products: [],
     address: null,
     subtotal: 0,
@@ -17,9 +18,10 @@ const cartSlice = createSlice({
       );
       if (existingItem) {
         existingItem.quantity += 1;
-        console.log("quantity triggered");
       } else {
         state.products.push({ ...action.payload, quantity: 1 });
+        state.cartCount += 1;
+        console.log(state.cartCount);
       }
     },
     removeFromCart: (state, action) => {
@@ -33,6 +35,8 @@ const cartSlice = createSlice({
             (item) => item.id !== action.payload.id
           );
         }
+        // state.cartCount -= 1;
+        // console.log(state.cartCount);
       }
     },
     selectedAddress: (state, action) => {
