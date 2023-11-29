@@ -39,7 +39,7 @@ export default function HomeProduct() {
       <div className="homeCardItems">
         {HomeProductData.map((data, index) => (
           <div className="homeCard" key={index}>
-            <img src={data.img} className="homeProdImg" />
+            <img src={data.img} className="homeProdImg" alt="product" />
             <p className="homeProductName">{data.name}</p>
             <p className="homeProductPrice">${data.price}</p>
             <a className="buyNowHomeBtn">Add to Cart</a>

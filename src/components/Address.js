@@ -49,7 +49,7 @@ export default function Address() {
       <div className={showAddressPopUp ? "address blurBackground" : "address"}>
         <p>Select Address</p>
         {addresses.map((item, index) => (
-          <div className="addressContainer">
+          <div className="addressContainer" key={index}>
             <div className="addressContent">
               <input
                 type="radio"
@@ -59,13 +59,17 @@ export default function Address() {
               />
               <div className="addressDetails">
                 <p>{item.street}</p>
-                <p>{`${item.street}, ${item.city}, ${item.state} ${item.zipCode}`}</p>
+                <p>{`${item.street} ${item.city} ${item.state} ${item.zipCode}`}</p>
                 <p>{item.phone}</p>
               </div>
             </div>
             <div className="addressBtn">
               <button>
-                <img src={Close} onClick={() => removeAddress(index)} />
+                <img
+                  src={Close}
+                  onClick={() => removeAddress(index)}
+                  alt="closeIcon"
+                />
               </button>
             </div>
           </div>

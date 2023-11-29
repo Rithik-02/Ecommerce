@@ -22,7 +22,7 @@ export default function Cart() {
   const quantiyDecrease = (data) => {
     dispatch(removeFromCart(data));
   };
-  console.log(cartItems.length);
+
   return (
     <div>
       <div className="cart">

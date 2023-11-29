@@ -1,6 +1,5 @@
 import React from "react";
 import "./Banner.css";
-
 import BannerImg from "../../assets/banner.png";
 import { Link } from "react-router-dom";
 
@@ -19,7 +18,7 @@ export default function Banner() {
           </Link>
         </div>
         <div className="phoneImgContainer">
-          <img className="iphoneImg" src={BannerImg} />
+          <img className="iphoneImg" src={BannerImg} alt="banner" />
         </div>
       </div>
     </div>

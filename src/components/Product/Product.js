@@ -16,7 +16,7 @@ export default function Product() {
       {filteredData.length > 0
         ? filteredData.map((data) => (
             <div className="productCard" key={data.id}>
-              <img src={data.img} className="homeProdImg" />
+              <img src={data.img} className="homeProdImg" alt="productImg" />
               <p className="productName">{data.name}</p>
               <p className="productPrice">${data.price}</p>
               <a
@@ -29,7 +29,7 @@ export default function Product() {
           ))
         : ProductData.map((data) => (
             <div className="productCard" key={data.id}>
-              <img src={data.img} className="homeProdImg" />
+              <img src={data.img} className="homeProdImg" alt="productImg" />
               <p className="productName">{data.name}</p>
               <p className="productPrice">${data.price}</p>
               <a

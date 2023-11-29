@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Payment.css";
 
 import Card from "../assets/Pay/Credit.png";
@@ -16,11 +16,10 @@ export default function Payment() {
   const [isFormValid, setIsFormValid] = useState(false);
   const [isOrderPlaced, setIsOrderPlaced] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setIsFormValid(cardholderName && cardNumber && expDate && cvv);
   }, [cardholderName, cardNumber, expDate, cvv]);
   const handleInputChange = (e) => {
-    // Update the corresponding state based on the input field
     switch (e.target.name) {
       case "cardholderName":
         setCardholderName(e.target.value);

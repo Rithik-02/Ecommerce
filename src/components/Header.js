@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
 import Logo from "../assets/Logo Vector.svg";
-// import Search from "../assets/Search.svg";
 import Favourite from "../assets/Favorites.svg";
 import Cart from "../assets/Cart.svg";
 import User from "../assets/User.svg";
@@ -26,7 +25,7 @@ export default function Header() {
       <div className="searchContainer">
         <input className="searchBar" type="search" placeholder="Search" />
       </div>
-      <img src={Menu} className="menuBtn" onClick={toggleMenu} />
+      <img src={Menu} className="menuBtn" onClick={toggleMenu} alt="icon" />
       <nav className={`navigation ${menuOpen ? "menu-open" : ""}`}>
         <Link to="/" className="navLink">
           Home
@@ -42,11 +41,13 @@ export default function Header() {
           About
         </a>
         <div className="headerIcon">
-          <span>{menuOpen ? "Wishlist" : <img src={Favourite} />}</span>
+          <span>
+            {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
+          </span>
           <Link to="/cart">
-            <span>{menuOpen ? "Cart" : <img src={Cart} />}</span>
+            <span>{menuOpen ? "Cart" : <img src={Cart} alt="icon" />}</span>
           </Link>
-          <span>{menuOpen ? "Account" : <img src={User} />}</span>
+          <span>{menuOpen ? "Account" : <img src={User} alt="icon" />}</span>
         </div>
       </nav>
     </div>

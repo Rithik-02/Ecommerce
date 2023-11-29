@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Up from "../../assets/Filter/up.png";
 import Down from "../../assets/Filter/down.png";
-import { ProductData } from "../../data/ProductData";
 import "./BrandFilter.css";
 import { brandFilteredData } from "../../Redux/Slice";
 import { useDispatch } from "react-redux";
@@ -10,15 +9,10 @@ export default function BrandFilter() {
   const dispatch = useDispatch();
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(true);
   const [brandName, setBrandName] = useState([]);
-  const [toPrice, setToPrice] = useState("");
   dispatch(brandFilteredData(brandName));
 
   const togglePriceDropdown = () => {
     setIsPriceDropdownOpen(!isPriceDropdownOpen);
-  };
-
-  const handleApplyFilter = () => {
-    console.log(`Filter Applied: From ${brandName} to ${toPrice}`);
   };
 
   return (

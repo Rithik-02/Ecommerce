@@ -18,7 +18,11 @@ export default function SizeFilter() {
       <div className="buildHead">
         <p>Build-in Memory</p>
         <div onClick={toggleMemoryDropdown}>
-          {isMemorydownOpen ? <img src={Up} /> : <img src={Down} />}
+          {isMemorydownOpen ? (
+            <img src={Up} alt="arrowImg" />
+          ) : (
+            <img src={Down} alt="arrowImg" />
+          )}
         </div>
       </div>
       <hr />

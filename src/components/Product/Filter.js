@@ -10,8 +10,8 @@ import { allFilteredData } from "../../Redux/Slice";
 
 const PriceFilter = () => {
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(true);
-  const [fromPrice, setFromPrice] = useState(null);
-  const [toPrice, setToPrice] = useState(null);
+  const [fromPrice, setFromPrice] = useState("");
+  const [toPrice, setToPrice] = useState("");
   const dispatch = useDispatch();
 
   const brandName = useSelector((state) => state.cart.brandData);
@@ -50,40 +50,16 @@ const PriceFilter = () => {
     dispatch(allFilteredData(filteredData));
   };
 
-  // const handleApplyFilter = () => {
-  //   if (fromPrice !== null && toPrice !== null) {
-  //     const filterCondition = (ProductData) =>
-  //       ProductData.price >= fromPrice && ProductData.price <= toPrice;
-  //     const priceFilteredData = ProductData.filter(filterCondition);
-  //     console.log("price fun");
-  //     console.log(priceFilteredData);
-  //   } else if (brandName && brandName.length > 0) {
-  //     const filteredBrandCondition = (ProductData) =>
-  //       brandName.some((brand) =>
-  //         ProductData.name.toLowerCase().includes(brand.toLowerCase())
-  //       );
-  //     const filteredBrandProduct = ProductData.filter(filteredBrandCondition);
-  //     console.log("brand fun");
-  //     console.log(filteredBrandProduct);
-  //   } else if (sizeDetails && sizeDetails.length > 0) {
-  //     const filteredBrandCondition = (ProductData) =>
-  //       sizeDetails.some((size) =>
-  //         ProductData.name.toLowerCase().includes(size.toLowerCase())
-  //       );
-  //     const filteredSizeProduct = ProductData.filter(filteredBrandCondition);
-  //     console.log("size fun");
-  //     console.log(filteredSizeProduct);
-  //   }
-
-  //   console.log(`Filter Applied: From ${brandName}`);
-  // };
-
   return (
     <div className="priceFilter">
       <div className="priceHead">
         <p>Price</p>
         <div className="price-dropdown" onClick={togglePriceDropdown}>
-          {isPriceDropdownOpen ? <img src={Up} /> : <img src={Down} />}
+          {isPriceDropdownOpen ? (
+            <img src={Up} alt="arrowIcon" />
+          ) : (
+            <img src={Down} alt="arrowIcon" />
+          )}
         </div>
       </div>
 

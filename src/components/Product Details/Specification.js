@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Specification.css";
 import Up from "../../assets/Filter/up.png";
 import Down from "../../assets/Filter/down.png";
+
 export default function Specification() {
+  const [view, setView] = useState(false);
   return (
     <div className="specification">
       <div className="detailsSummary">
@@ -51,19 +53,23 @@ export default function Specification() {
           </div>
         </div>
       </div>
-      <div className="screenDetails">
-        <p>CPU</p>
-        <div className="screenSpec">
+      {view ? (
+        <div className="screenDetails">
           <p>CPU</p>
-          <p>A16 Bionic</p>
+          <div className="screenSpec">
+            <p>CPU</p>
+            <p>A16 Bionic</p>
+          </div>
+          <div className="screenSpec">
+            <p>Number of cores</p>
+            <p>6</p>
+          </div>
         </div>
-        <div className="screenSpec">
-          <p>Number of cores</p>
-          <p>6</p>
-        </div>
-      </div>
-      <button className="viewMoreBtn">
-        View More <img src={Up} />
+      ) : (
+        ""
+      )}
+      <button className="viewMoreBtn" onClick={() => setView(!view)}>
+        View More{view ? <img src={Up} /> : <img src={Down} />}
       </button>
     </div>
   );
