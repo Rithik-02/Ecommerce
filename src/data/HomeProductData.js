@@ -8,6 +8,8 @@ import SamBuds from "../assets/HomeProduct/SamBuds.png";
 import Ipad from "../assets/HomeProduct/Ipad.png";
 import Iphone146 from "../assets/Products/Iphone 14 pro 1 (5).png";
 import Iphone147 from "../assets/Products/Iphone 14 pro 1 (6).png";
+import Iphone144 from "../assets/Products/Iphone 14 pro 1 (3).png";
+import Iphone145 from "../assets/Products/Iphone 14 pro 1 (4).png";
 
 export const HomeProductData = [
   {
@@ -69,5 +71,17 @@ export const HomeProductData = [
     name: "Apple iPhone 13 mini 128GB Pink",
     id: "(MKL23)",
     price: "850",
+  },
+  {
+    id: 4,
+    img: Iphone144,
+    name: "Apple iPhone 14 Pro 1TBGB Silver",
+    price: 1499,
+  },
+  {
+    id: 5,
+    img: Iphone145,
+    name: "Apple iPhone 14 Pro 1TB Gold",
+    price: 1399,
   },
 ];

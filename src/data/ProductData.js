@@ -7,7 +7,7 @@ import Iphone146 from "../assets/Products/Iphone 14 pro 1 (5).png";
 import Iphone147 from "../assets/Products/Iphone 14 pro 1 (6).png";
 import Iphone148 from "../assets/Products/Iphone 14 pro 1 (7).png";
 import Iphone149 from "../assets/Products/Iphone 14 pro 1 (8).png";
-
+import SamWat from "../assets/HomeProduct/SamWat.png";
 export const ProductData = [
   {
     id: 1,
@@ -31,7 +31,6 @@ export const ProductData = [
     id: 4,
     img: Iphone144,
     name: "Apple iPhone 14 Pro 1TBGB Silver",
-
     price: 1499,
   },
   {
@@ -54,6 +53,12 @@ export const ProductData = [
     name: "Apple iPhone 13 mini 128GB Pink",
 
     price: 850,
+  },
+  {
+    img: SamWat,
+    name: "Samasung Galaxy Watch 6 Classic 47mm Black",
+    id: 13,
+    price: "369",
   },
   {
     id: 8,

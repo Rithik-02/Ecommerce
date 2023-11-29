@@ -23,20 +23,23 @@ export default function SmallerBanner() {
     };
   }, []);
   return (
-    <div class="wrapper">
-      <div class="box a">
-        <img src={isSmallScreen ? playStationFull : playStation} />
+    <div className="wrapper">
+      <div className="box a">
+        <img
+          src={isSmallScreen ? playStationFull : playStation}
+          alt="SmallBannerImg"
+        />
         <div className="productContent">
-          <p class="bannerproductName">Playstation 5</p>
+          <p className="bannerproductName">Playstation 5</p>
           <p>
             Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will
             redefine your PlayStation experience.
           </p>
         </div>
       </div>
-      <div class="box b">
+      <div className="box b">
         <div className="productContent">
-          <p class="bannerproductName">Macbook Air</p>
+          <p className="bannerproductName">Macbook Air</p>
           <p>
             The new 15‑inch MacBook Air makes room for more of what you love
             with a spacious Liquid Retina display.
@@ -45,19 +48,19 @@ export default function SmallerBanner() {
             Shop Now
           </Link>
         </div>
-        <img src={isSmallScreen ? MacBookfull : MacBook} />
+        <img src={isSmallScreen ? MacBookfull : MacBook} alt="SmallBannerImg" />
       </div>
-      <div class="box c">
-        <img src={isSmallScreen ? AirpodFull : Airpod} />
+      <div className="box c">
+        <img src={isSmallScreen ? AirpodFull : Airpod} alt="SmallBannerImg" />
         <div className="productContent">
-          <p class="bannerproductName">Apple AirPods Max</p>
+          <p className="bannerproductName">Apple AirPods Max</p>
           <p>Computational audio. Listen, it's powerful</p>
         </div>
       </div>
-      <div class="box d">
-        <img src={isSmallScreen ? VisionFull : Vision} />
+      <div className="box d">
+        <img src={isSmallScreen ? VisionFull : Vision} alt="SmallBannerImg" />
         <div className="productContent visioncontent">
-          <p class="bannerproductName visionName">Apple Vision Pro</p>
+          <p className="bannerproductName visionName">Apple Vision Pro</p>
           <p>An immersive way to experience entertainment</p>
         </div>
       </div>

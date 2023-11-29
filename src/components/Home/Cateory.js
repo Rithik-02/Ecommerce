@@ -12,7 +12,7 @@ export default function () {
       <p className="browse">Browse By Category</p>
       <div className="categoryCard">
         {data.map((item, index) => (
-          <div className="categoryItems">
+          <div className="categoryItems" key={index}>
             <Link to="/product">
               <img src={item.Img} />
             </Link>
