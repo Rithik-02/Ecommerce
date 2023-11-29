@@ -9,7 +9,19 @@ export default function SizeFilter() {
   const [gbSize, setGbSize] = useState([]);
   const dispatch = useDispatch();
 
-  dispatch(sizeFilteredData(gbSize));
+  const handleGbFilter = (e) => {
+    const value = e.target.value;
+
+    setGbSize((prevGbSize) => {
+      const updatedGbSize = e.target.checked
+        ? [...prevGbSize, value]
+        : prevGbSize.filter((size) => size !== value);
+
+      dispatch(sizeFilteredData(updatedGbSize));
+      return updatedGbSize;
+    });
+  };
+
   const toggleMemoryDropdown = () => {
     setIsMemoryDropdownOpen(!isMemorydownOpen);
   };
@@ -33,13 +45,7 @@ export default function SizeFilter() {
               className="check"
               type="checkbox"
               value="128"
-              onChange={(e) =>
-                setGbSize((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.value]
-                    : prevBrandName.filter((brand) => brand !== e.target.value)
-                )
-              }
+              onChange={(e) => handleGbFilter(e)}
             />
             128GB
           </label>
@@ -48,13 +54,7 @@ export default function SizeFilter() {
               className="check"
               type="checkbox"
               value="256"
-              onChange={(e) =>
-                setGbSize((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.value]
-                    : prevBrandName.filter((brand) => brand !== e.target.value)
-                )
-              }
+              onChange={(e) => handleGbFilter(e)}
             />
             256GB
           </label>
@@ -63,13 +63,7 @@ export default function SizeFilter() {
               className="check"
               type="checkbox"
               value="512"
-              onChange={(e) =>
-                setGbSize((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.value]
-                    : prevBrandName.filter((brand) => brand !== e.target.value)
-                )
-              }
+              onChange={(e) => handleGbFilter(e)}
             />
             512GB
           </label>
@@ -78,13 +72,7 @@ export default function SizeFilter() {
               className="check"
               type="checkbox"
               value="1TB"
-              onChange={(e) =>
-                setGbSize((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.value]
-                    : prevBrandName.filter((brand) => brand !== e.target.value)
-                )
-              }
+              onChange={(e) => handleGbFilter(e)}
             />
             1TB
           </label>

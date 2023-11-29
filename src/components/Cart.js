@@ -73,7 +73,7 @@ export default function Cart() {
               <p className="orderBold">${89 + subTotal}</p>
             </div>
             <Link to="/address" className="checkoutBtn">
-              <a>Checkout</a>
+              Checkout
             </Link>
           </div>
         ) : (

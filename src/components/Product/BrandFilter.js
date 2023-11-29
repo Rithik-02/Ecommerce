@@ -9,7 +9,19 @@ export default function BrandFilter() {
   const dispatch = useDispatch();
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(true);
   const [brandName, setBrandName] = useState([]);
-  dispatch(brandFilteredData(brandName));
+
+  const handleBrandFilter = (e) => {
+    const value = e.target.name;
+
+    setBrandName((prevBrand) => {
+      const updatedBrand = e.target.checked
+        ? [...prevBrand, value]
+        : prevBrand.filter((brand) => brand !== value);
+
+      dispatch(brandFilteredData(updatedBrand));
+      return updatedBrand;
+    });
+  };
 
   const togglePriceDropdown = () => {
     setIsPriceDropdownOpen(!isPriceDropdownOpen);
@@ -31,13 +43,7 @@ export default function BrandFilter() {
               className="check"
               type="checkbox"
               name="Apple"
-              onChange={(e) =>
-                setBrandName((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.name]
-                    : prevBrandName.filter((brand) => brand !== e.target.name)
-                )
-              }
+              onChange={(e) => handleBrandFilter(e)}
             />
             Apple
           </label>
@@ -46,13 +52,7 @@ export default function BrandFilter() {
               className="check"
               type="checkbox"
               name="SamSung"
-              onChange={(e) =>
-                setBrandName((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.name]
-                    : prevBrandName.filter((brand) => brand !== e.target.name)
-                )
-              }
+              onChange={(e) => handleBrandFilter(e)}
             />
             SamSung
           </label>
@@ -61,30 +61,9 @@ export default function BrandFilter() {
               className="check"
               type="checkbox"
               name="Poco"
-              onChange={(e) =>
-                setBrandName((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.name]
-                    : prevBrandName.filter((brand) => brand !== e.target.name)
-                )
-              }
+              onChange={(e) => handleBrandFilter(e)}
             />
             Poco
-          </label>
-          <label>
-            <input
-              className="check"
-              type="checkbox"
-              name="Oppo"
-              onChange={(e) =>
-                setBrandName((prevBrandName) =>
-                  e.target.checked
-                    ? [...prevBrandName, e.target.name]
-                    : prevBrandName.filter((brand) => brand !== e.target.name)
-                )
-              }
-            />
-            Oppo
           </label>
         </div>
       )}

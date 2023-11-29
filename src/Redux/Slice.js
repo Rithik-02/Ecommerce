@@ -43,6 +43,7 @@ const cartSlice = createSlice({
     },
     brandFilteredData: (state, action) => {
       state.brandData = action.payload;
+      console.log(action.payload);
     },
     sizeFilteredData: (state, action) => {
       state.sizeData = action.payload;

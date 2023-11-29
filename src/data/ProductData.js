@@ -8,6 +8,9 @@ import Iphone147 from "../assets/Products/Iphone 14 pro 1 (6).png";
 import Iphone148 from "../assets/Products/Iphone 14 pro 1 (7).png";
 import Iphone149 from "../assets/Products/Iphone 14 pro 1 (8).png";
 import SamWat from "../assets/HomeProduct/SamWat.png";
+import Watch from "../assets/HomeProduct/Watch.png";
+import SamsungPhone from "../assets/HomeProduct/SamsungPhone.png";
+
 export const ProductData = [
   {
     id: 1,
@@ -56,8 +59,8 @@ export const ProductData = [
   },
   {
     img: SamWat,
-    name: "Samasung Galaxy Watch 6 Classic 47mm Black",
-    id: 13,
+    name: "Samsung Galaxy Watch 6 Classic 47mm Black",
+    id: 16,
     price: "369",
   },
   {
@@ -89,4 +92,16 @@ export const ProductData = [
     price: 510,
   },
   { id: 12, img: Iphone143, name: "Apple iPhone 11 128GB White", price: 550 },
+  {
+    id: 13,
+    img: Watch,
+    name: "Apple Watch Series 9 GPS 41mm Starlight Aluminium Case",
+    price: "399",
+  },
+  {
+    img: SamsungPhone,
+    name: "Samsung Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
+    id: "(MQ2334321XV)",
+    price: "1799",
+  },
 ];

@@ -36,7 +36,7 @@ const PriceFilter = () => {
           product.name.toLowerCase().includes(brand.toLowerCase())
         );
 
-      filteredData = filteredData.filter(brandFilterCondition);
+      filteredData = ProductData.filter(brandFilterCondition);
     }
 
     if (sizeDetails && sizeDetails.length > 0) {
@@ -45,8 +45,9 @@ const PriceFilter = () => {
           product.name.toLowerCase().includes(size.toLowerCase())
         );
 
-      filteredData = filteredData.filter(sizeFilterCondition);
+      filteredData = ProductData.filter(sizeFilterCondition);
     }
+
     dispatch(allFilteredData(filteredData));
   };
 
