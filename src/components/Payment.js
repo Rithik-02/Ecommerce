@@ -12,7 +12,6 @@ export default function Payment() {
   const paymentAddress = useSelector((state) => state.cart.address);
   const payItems = useSelector((state) => state.cart.products);
   const total = useSelector((state) => state.cart.subtotal);
-  const product = useSelector((state) => state.cart.products);
 
   const [cardholderName, setCardholderName] = useState("");
   const [cardNumber, setCardNumber] = useState("");
