@@ -6,10 +6,12 @@ import Cart from "../assets/Cart.svg";
 import User from "../assets/User.svg";
 import Menu from "../assets/Burger.svg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const count = useSelector((state) => state.cart.cartCount);
+  console.log(count);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     if (!menuOpen) {
@@ -47,7 +49,7 @@ export default function Header() {
           <Link to="/cart">
             <span className="countCart">
               {menuOpen ? "Cart" : <img src={Cart} alt="icon" />}
-              <span className="countIcon">3</span>
+              {count === 0 ? "" : <span className="countIcon">{count}</span>}
             </span>
           </Link>
           <span>{menuOpen ? "Account" : <img src={User} alt="icon" />}</span>

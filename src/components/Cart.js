@@ -12,16 +12,12 @@ export default function Cart() {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
-  if (subTotal > 0) {
-    dispatch(addTotal(subTotal));
-  }
+  useEffect(() => {
+    if (subTotal > 0) {
+      dispatch(addTotal(subTotal));
+    }
+  }, [subTotal, dispatch]);
   const removeHandler = (product) => {
-    // Handle removal outside the rendering phase
-    handleRemove(product);
-  };
-
-  const handleRemove = (product) => {
-    // Dispatch the action to remove from cart
     dispatch(removeFromCart(product));
   };
   const quantiyIncrease = (data) => {
