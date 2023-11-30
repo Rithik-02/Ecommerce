@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./Payment.css";
 import Card from "../assets/Pay/Credit.png";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { emptyCart } from "../Redux/Slice";
+import { useNavigate } from "react-router-dom";
 
 export default function Payment() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const paymentAddress = useSelector((state) => state.cart.address);
   const payItems = useSelector((state) => state.cart.products);
   const total = useSelector((state) => state.cart.subtotal);
+  const product = useSelector((state) => state.cart.products);
 
   const [cardholderName, setCardholderName] = useState("");
   const [cardNumber, setCardNumber] = useState("");
@@ -46,6 +51,8 @@ export default function Payment() {
       setCardNumber("");
       setExpDate("");
       setCvv("");
+      dispatch(emptyCart());
+      navigate("/");
     }, 3000);
   };
   return (

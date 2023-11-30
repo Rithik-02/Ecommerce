@@ -41,7 +41,6 @@
 }
 .filterApplyBtn {
   width: 15rem;
-
   display: inline-block;
   background-color: #211c24;
   color: #ffff;
@@ -76,7 +75,7 @@
     font-size: 1rem;
   }
   .inputPrice {
-    width: 10rem;
+    width: 8rem;
     height: 3rem;
     padding: 1rem;
     font-size: 1rem;
@@ -85,5 +84,11 @@
     display: flex;
     justify-content: center;
     margin-top: 2.5rem;
+  }
+  .filterApplyBtn {
+    width: 12rem;
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+    margin-bottom: 2rem;
   }
 }

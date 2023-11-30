@@ -8,7 +8,7 @@ export default function ProductPage() {
 
   const filterHandler = () => {
     setIsFilterOpen(!isFilteropen);
-    console.log(isFilteropen);
+
     if (!isFilteropen) {
       document.body.style.overflow = "hidden";
     } else {

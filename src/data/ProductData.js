@@ -60,7 +60,7 @@ export const ProductData = [
   {
     img: SamWat,
     name: "Samsung Galaxy Watch 6 Classic 47mm Black",
-    id: 16,
+    id: 19,
     price: "369",
   },
   {

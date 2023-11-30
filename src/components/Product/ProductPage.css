@@ -19,7 +19,7 @@
     border-radius: 8px;
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     gap: 4rem;
     border: 1px solid #dddddd;
@@ -27,8 +27,8 @@
   }
   .productPage {
     grid-template-columns: 1fr;
-    padding: 2rem;
-    gap: 3rem;
+    padding: 0 2rem 2rem 2rem;
+    gap: 2rem;
   }
   .filterComponent {
     display: none;

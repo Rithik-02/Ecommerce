@@ -23,7 +23,6 @@ const cartSlice = createSlice({
       } else {
         state.products.push({ ...action.payload, quantity: 1 });
         state.cartCount += 1;
-        console.log(state.cartCount);
       }
     },
     removeFromCart: (state, action) => {
@@ -48,7 +47,6 @@ const cartSlice = createSlice({
     },
     brandFilteredData: (state, action) => {
       state.brandData = action.payload;
-      console.log(action.payload);
     },
     sizeFilteredData: (state, action) => {
       state.sizeData = action.payload;
@@ -63,6 +61,10 @@ const cartSlice = createSlice({
     sizeCalulate: (state, action) => {
       state.calculatedSize = action.payload;
     },
+    emptyCart: (state) => {
+      state.cartCount = 0;
+      state.products = [];
+    },
   },
 });
 
@@ -76,5 +78,6 @@ export const {
   sizeFilteredData,
   setIsSmallScreen,
   sizeCalulate,
+  emptyCart,
 } = cartSlice.actions;
 export default cartSlice.reducer;
