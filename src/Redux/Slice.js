@@ -35,8 +35,7 @@ const cartSlice = createSlice({
             (item) => item.id !== action.payload.id
           );
         }
-        // state.cartCount -= 1;
-        // console.log(state.cartCount);
+        state.cartCount -= 1;
       }
     },
     selectedAddress: (state, action) => {

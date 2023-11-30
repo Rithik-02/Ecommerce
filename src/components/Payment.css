@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 30rem;
+  width: 15rem;
+  max-height: 30rem;
   overflow-y: scroll;
   width: 43rem;
 }
