@@ -98,3 +98,15 @@
     text-decoration: underline;
   }
 }
+@media (max-width: 425px) {
+  .homeCard {
+    width: 13rem;
+    height: 24rem;
+    gap: 1rem;
+    padding: 1.8rem 1rem;
+  }
+  .homeCardItems {
+    justify-content: center;
+    gap: 2rem;
+  }
+}

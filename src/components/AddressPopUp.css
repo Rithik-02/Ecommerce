@@ -41,6 +41,7 @@
   border-radius: 7px;
   border: 1px solid lightgray;
   width: 100%;
+  outline: none;
 }
 .addAdrsBtns {
   display: flex;
@@ -90,5 +91,23 @@
   .AddAdrs,
   .cancelAddrs {
     width: 20rem;
+  }
+}
+@media (max-width: 425px) {
+  .addressPopup p {
+    font-size: 1.8rem;
+  }
+  .addressPopup label {
+    font-size: 1.3rem;
+  }
+  .addressPopup input {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .AddAdrs,
+  .cancelAddrs {
+    font-size: 1.2rem;
+    padding: 1.3rem 4rem;
+    border-radius: 5px;
   }
 }

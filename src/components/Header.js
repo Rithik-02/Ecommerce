@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import Logo from "../assets/Logo Vector.svg";
 import Favourite from "../assets/Favorites.svg";
@@ -10,6 +10,18 @@ import { useSelector } from "react-redux";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 750);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const count = useSelector((state) => state.cart.cartCount);
   console.log(count);
   const toggleMenu = () => {
@@ -29,29 +41,35 @@ export default function Header() {
       </div>
       <img src={Menu} className="menuBtn" onClick={toggleMenu} alt="icon" />
       <nav className={`navigation ${menuOpen ? "menu-open" : ""}`}>
-        <Link to="/" className="navLink">
+        <Link to="/" className="navLink" onClick={toggleMenu}>
           Home
         </Link>
-        <a className="navLink" href="#footer">
+        <a className="navLink" href="#footer" onClick={toggleMenu}>
           Contact Us
         </a>
-        <Link className="navLink" to="/product">
+        <Link className="navLink" to="/product" onClick={toggleMenu}>
           Products
         </Link>
-        <a className="navLink" href="#footer">
+        <a className="navLink" href="#footer" onClick={toggleMenu}>
           About
         </a>
         <div className="headerIcon">
-          <span>
+          <span onClick={toggleMenu}>
             {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
           </span>
-          <Link to="/cart" style={{ textDecoration: "none" }}>
+          <Link
+            to="/cart"
+            style={{ textDecoration: "none" }}
+            onClick={toggleMenu}
+          >
             <span className="countCart">
-              {menuOpen ? "Cart" : <img src={Cart} alt="icon" />}
+              {isSmallScreen ? "Cart" : <img src={Cart} alt="icon" />}
               {count === 0 ? "" : <span className="countIcon">{count}</span>}
             </span>
           </Link>
-          <span>{menuOpen ? "Account" : <img src={User} alt="icon" />}</span>
+          <span onClick={toggleMenu}>
+            {isSmallScreen ? "Account" : <img src={User} alt="icon" />}
+          </span>
         </div>
       </nav>
     </div>

@@ -49,3 +49,18 @@
     justify-content: center;
   }
 }
+@media (max-width: 425px) {
+  .categoryItems {
+    width: 10rem;
+    padding: 1.3rem 2.3rem;
+    background-color: #ededed;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  .catItemName {
+    font-size: 1.2rem;
+  }
+}
