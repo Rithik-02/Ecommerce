@@ -3,11 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Product.css";
 import { addToCart } from "../../Redux/Slice";
 import { ProductData } from "../../data/ProductData";
+import { useEffect, useState } from "react";
 
 export default function Product() {
   const dispatch = useDispatch();
   const filteredData = useSelector((state) => state.cart.filterProduct);
-  console.log("product filtered data", filteredData);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 460);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const handleAddtoCart = (productDetails) => {
     dispatch(addToCart(productDetails));
   };
@@ -18,9 +29,15 @@ export default function Product() {
             <div className="productCard" key={data.id}>
               <img src={data.img} className="homeProdImg" alt="productImg" />
               <p className="productName">
-                {data.name.length > 42
-                  ? `${data.name.substring(0, 42)}...`
-                  : data.name}
+                <p className="homeProductName">
+                  {isSmallScreen
+                    ? data.name.length > 25
+                      ? `${data.name.substring(0, 20)}...`
+                      : data.name
+                    : data.name.length > 42
+                    ? `${data.name.substring(0, 42)}...`
+                    : data.name}
+                </p>
               </p>
 
               <p className="productPrice">${data.price}</p>
@@ -36,7 +53,11 @@ export default function Product() {
             <div className="productCard" key={data.id}>
               <img src={data.img} className="homeProdImg" alt="productImg" />
               <p className="productName">
-                {data.name.length > 42
+                {isSmallScreen
+                  ? data.name.length > 25
+                    ? `${data.name.substring(0, 20)}...`
+                    : data.name
+                  : data.name.length > 42
                   ? `${data.name.substring(0, 42)}...`
                   : data.name}
               </p>

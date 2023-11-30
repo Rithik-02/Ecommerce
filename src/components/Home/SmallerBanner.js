@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./SmallerBanner.css";
 import playStation from "../../assets/PlayStation.png";
 import playStationFull from "../../assets/Banner/PlayStationFull.png";
@@ -9,19 +9,9 @@ import AirpodFull from "../../assets/Banner/headsetfull.png";
 import Vision from "../../assets/vision.png";
 import VisionFull from "../../assets/Banner/visionfull.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 export default function SmallerBanner() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 460);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const isSmallScreen = useSelector((state) => state.cart.isSmallScreen);
   return (
     <div className="wrapper">
       <div className="box a">

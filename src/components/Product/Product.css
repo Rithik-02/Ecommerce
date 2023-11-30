@@ -66,18 +66,13 @@
     font-weight: 700;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .productCard {
-    width: 13rem;
+    width: 12rem;
     height: 24rem;
     gap: 1rem;
     padding: 1.8rem 1rem;
   }
-  .filterBtn {
-    margin: auto;
-  }
-}
-@media (max-width: 321px) {
   .filterBtn {
     margin: auto;
   }

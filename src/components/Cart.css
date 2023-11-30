@@ -174,4 +174,7 @@
   .cartItemDetails > p {
     width: 9rem;
   }
+  .cartEmptyText {
+    font-size: 3rem;
+  }
 }

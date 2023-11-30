@@ -23,7 +23,6 @@ export default function Header() {
     };
   }, []);
   const count = useSelector((state) => state.cart.cartCount);
-  console.log(count);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     if (!menuOpen) {
@@ -41,21 +40,37 @@ export default function Header() {
       </div>
       <img src={Menu} className="menuBtn" onClick={toggleMenu} alt="icon" />
       <nav className={`navigation ${menuOpen ? "menu-open" : ""}`}>
-        <Link to="/" className="navLink" onClick={toggleMenu}>
+        <Link
+          to="/"
+          className="navLink"
+          onClick={isSmallScreen ? toggleMenu : undefined}
+        >
           Home
         </Link>
-        <a className="navLink" href="#footer" onClick={toggleMenu}>
+        <a
+          className="navLink"
+          href="#footer"
+          onClick={isSmallScreen ? toggleMenu : undefined}
+        >
           Contact Us
         </a>
-        <Link className="navLink" to="/product" onClick={toggleMenu}>
+        <Link
+          className="navLink"
+          to="/product"
+          onClick={isSmallScreen ? toggleMenu : undefined}
+        >
           Products
         </Link>
-        <a className="navLink" href="#footer" onClick={toggleMenu}>
+        <a
+          className="navLink"
+          href="#footer"
+          onClick={isSmallScreen ? toggleMenu : undefined}
+        >
           About
         </a>
         <div className="headerIcon">
           <span onClick={toggleMenu}>
-            {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
+            {isSmallScreen ? "Wishlist" : <img src={Favourite} alt="icon" />}
           </span>
           <Link
             to="/cart"

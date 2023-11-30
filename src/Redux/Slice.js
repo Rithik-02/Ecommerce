@@ -10,6 +10,8 @@ const cartSlice = createSlice({
     brandData: [],
     sizeData: [],
     filterProduct: [],
+    isSmallScreen: false,
+    calculatedSize: null,
   },
   reducers: {
     addToCart: (state, action) => {
@@ -54,6 +56,13 @@ const cartSlice = createSlice({
     allFilteredData: (state, action) => {
       state.filterProduct = action.payload;
     },
+
+    setIsSmallScreen: (state, action) => {
+      state.isSmallScreen = action.payload;
+    },
+    sizeCalulate: (state, action) => {
+      state.calculatedSize = action.payload;
+    },
   },
 });
 
@@ -65,5 +74,7 @@ export const {
   brandFilteredData,
   allFilteredData,
   sizeFilteredData,
+  setIsSmallScreen,
+  sizeCalulate,
 } = cartSlice.actions;
 export default cartSlice.reducer;

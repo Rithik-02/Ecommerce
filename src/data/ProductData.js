@@ -73,7 +73,7 @@ export const ProductData = [
   {
     id: 9,
     img: Iphone149,
-    name: "Apple iPhone 14 Pro 256Gb Silevr",
+    name: "Apple iPhone 14 Pro 256Gb Silver",
 
     price: 1399,
   },
@@ -101,7 +101,14 @@ export const ProductData = [
   {
     img: SamsungPhone,
     name: "Samsung Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
-    id: "(MQ2334321XV)",
+    id: 17,
     price: "1799",
+  },
+  {
+    id: 16,
+    img: Iphone147,
+    name: "Apple iPhone 13 mini 128GB Pink",
+
+    price: 850,
   },
 ];

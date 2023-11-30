@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomeProduct.css";
 import { HomeProductData } from "../../data/HomeProductData";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsSmallScreen, sizeCalulate } from "../../Redux/Slice";
 
 export default function HomeProduct() {
+  const dispatch = useDispatch();
   const [selectedHeading, setSelectedHeading] = useState(0);
+  const isSmallScreen = useSelector((state) => state.cart.isSmallScreen);
+
+  useEffect(() => {
+    const handleResize = () => {
+      dispatch(setIsSmallScreen(window.innerWidth <= 460));
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      dispatch(sizeCalulate(isSmallScreen));
+    };
+  }, [dispatch, isSmallScreen]);
 
   const handleHeadingClick = (index) => {
     setSelectedHeading(index);
@@ -36,12 +52,20 @@ export default function HomeProduct() {
         >
           Featured Products
         </p>
-      </div>{" "}
+      </div>
       <div className="homeCardItems">
         {HomeProductData.map((data, index) => (
           <div className="homeCard" key={index}>
             <img src={data.img} className="homeProdImg" alt="product" />
-            <p className="homeProductName">{data.name}</p>
+            <p className="homeProductName">
+              {isSmallScreen
+                ? data.name.length > 25
+                  ? `${data.name.substring(0, 20)}...`
+                  : data.name
+                : data.name.length > 42
+                ? `${data.name.substring(0, 42)}...`
+                : data.name}
+            </p>
             <p className="homeProductPrice">${data.price}</p>
             <Link to="/product" className="buyNowHomeBtn">
               Go to Product
