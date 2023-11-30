@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 export default function BrandFilter() {
   const dispatch = useDispatch();
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [brandName, setBrandName] = useState([]);
 
   const handleBrandFilter = (e) => {

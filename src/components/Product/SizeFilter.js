@@ -6,7 +6,9 @@ import { sizeFilteredData } from "../../Redux/Slice";
 import { useDispatch } from "react-redux";
 export default function SizeFilter() {
   const [isMemorydownOpen, setIsMemoryDropdownOpen] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [gbSize, setGbSize] = useState([]);
+
   const dispatch = useDispatch();
 
   const handleGbFilter = (e) => {
