@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SmallerBanner.css";
 import playStation from "../../assets/PlayStation.png";
 import playStationFull from "../../assets/Banner/PlayStationFull.png";
-import MacBook from "../../assets/MacBook Pro 14mac.svg";
+import MacBook from "../../assets/MacBook Pro 14mac.png";
 import MacBookfull from "../../assets/Banner/MacBookfull.png";
 import Airpod from "../../assets/headset.png";
 import AirpodFull from "../../assets/Banner/headsetfull.png";
