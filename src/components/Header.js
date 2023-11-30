@@ -51,9 +51,7 @@ export default function Header() {
               {count === 0 ? "" : <span className="countIcon">{count}</span>}
             </span>
           </Link>
-          <span onClick={toggleMenu}>
-            {menuOpen ? "Account" : <img src={User} alt="icon" />}
-          </span>
+          <span>{menuOpen ? "Account" : <img src={User} alt="icon" />}</span>
         </div>
       </nav>
     </div>
