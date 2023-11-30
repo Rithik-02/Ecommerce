@@ -55,7 +55,7 @@ export default function Payment() {
         <div className="payitems">
           {payItems.map((items, id) => (
             <div className="addedItems" key={id}>
-              <img src={items.img} />
+              <img src={items.img} alt="icon" />
               <p>{items.name}</p>
               <p>${items.price}</p>
             </div>
@@ -86,7 +86,7 @@ export default function Payment() {
       </div>
       <div className="payment">
         <p>Payment</p>
-        <img src={Card} />
+        <img src={Card} alt="icon" />
 
         <input
           type="text"

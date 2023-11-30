@@ -17,10 +17,10 @@ export default function Footer() {
           </p>
         </div>
         <div className="footerIcon">
-          <img src={Facebook} className="footerIcn" />
-          <img src={Tiktok} className="footerIcn" />
-          <img src={Twitter} className="footerIcn" />
-          <img src={Instagram} className="footerIcn" />
+          <img src={Facebook} className="footerIcn" alt="icon" />
+          <img src={Tiktok} className="footerIcn" alt="icon" />
+          <img src={Twitter} className="footerIcn" alt="icon" />
+          <img src={Instagram} className="footerIcn" alt="icon" />
         </div>
       </div>
       <div className="services">

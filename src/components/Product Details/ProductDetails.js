@@ -21,13 +21,13 @@ export default function ProductDetails() {
       <div className="productDetails">
         <div className="productDetailImage">
           <div className="sideImages">
-            <img src={IMG1} />
-            <img src={IMG2} />
-            <img src={IMG3} />
-            <img src={IMG4} />
+            <img src={IMG1} alt="icon" />
+            <img src={IMG2} alt="icon" />
+            <img src={IMG3} alt="icon" />
+            <img src={IMG4} alt="icon" />
           </div>
           <div className="mainImage">
-            <img src={MainImg} />
+            <img src={MainImg} alt="icon" />
           </div>
         </div>
         <div className="productDetailsSpec">
@@ -49,42 +49,42 @@ export default function ProductDetails() {
           </div>
           <div className="productSpecCardDetails">
             <div className="specCard">
-              <img src={Screensize} />
+              <img src={Screensize} alt="icon" />
               <div className="specCardDetails">
                 <p className="specCardhead">Screen size</p>
                 <p className="specCardSubHead">6.7"</p>
               </div>
             </div>
             <div className="specCard">
-              <img src={cpu} />
+              <img src={cpu} alt="icon" />
               <div className="specCardDetails">
                 <p className="specCardhead">CPU</p>
                 <p className="specCardSubHead">Apple A16 Bionic</p>
               </div>
             </div>
             <div className="specCard">
-              <img src={core} />
+              <img src={core} alt="icon" />
               <div className="specCardDetails">
                 <p className="specCardhead">Number of Cores</p>
                 <p className="specCardSubHead">6</p>
               </div>
             </div>
             <div className="specCard">
-              <img src={camera} />
+              <img src={camera} alt="icon" />
               <div className="specCardDetails">
                 <p className="specCardhead">Main Camera</p>
                 <p className="specCardSubHead">48-12-12 MP</p>
               </div>
             </div>
             <div className="specCard">
-              <img src={camera} />
+              <img src={camera} alt="icon" />
               <div className="specCardDetails">
                 <p className="specCardhead">Front Camera</p>
                 <p className="specCardSubHead">12 MP</p>
               </div>
             </div>
             <div className="specCard">
-              <img src={battery} />
+              <img src={battery} alt="icon" />
               <div className="specCardDetails">
                 <p className="specCardhead">Battery Capacity</p>
                 <p className="specCardSubHead">4323mAh</p>
@@ -105,21 +105,21 @@ export default function ProductDetails() {
           </div>
           <div className="productDeliveryDetails">
             <div className="deliveryDetails">
-              <img src={Truck} className="deliveryImg" />
+              <img src={Truck} className="deliveryImg" alt="icon" />
               <div>
                 <p>Free Delivery</p>
                 <span>1-2 day</span>
               </div>
             </div>
             <div className="deliveryDetails">
-              <img src={Stock} className="deliveryImg" />
+              <img src={Stock} className="deliveryImg" alt="icon" />
               <div>
                 <p>In Stock</p>
                 <span>Today</span>
               </div>
             </div>
             <div className="deliveryDetails">
-              <img src={Gurantee} className="deliveryImg" />
+              <img src={Gurantee} className="deliveryImg" alt="icon" />
               <div>
                 <p>Guaranteed</p>
                 <span>1 year</span>

@@ -24,12 +24,12 @@ export default function Product() {
               </p>
 
               <p className="productPrice">${data.price}</p>
-              <a
+              <button
                 className="productbuyNowHomeBtn"
                 onClick={() => handleAddtoCart(data)}
               >
                 Add to Cart
-              </a>
+              </button>
             </div>
           ))
         : ProductData.map((data) => (

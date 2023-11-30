@@ -32,7 +32,11 @@ export default function BrandFilter() {
       <div className="brandHead">
         <p>Brand</p>
         <div onClick={togglePriceDropdown}>
-          {isPriceDropdownOpen ? <img src={Up} /> : <img src={Down} />}
+          {isPriceDropdownOpen ? (
+            <img src={Up} alt="icon" />
+          ) : (
+            <img src={Down} alt="icon" />
+          )}
         </div>
       </div>
       <hr />

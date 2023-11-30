@@ -38,7 +38,7 @@ export default function Header() {
         <Link className="navLink" to="/product">
           Products
         </Link>
-        <a className="navLink" href="#">
+        <a className="navLink" href="#footer">
           About
         </a>
         <div className="headerIcon">
