@@ -69,7 +69,8 @@ export default function Specification() {
         ""
       )}
       <button className="viewMoreBtn" onClick={() => setView(!view)}>
-        View More{view ? <img src={Up} /> : <img src={Down} />}
+        View More
+        {view ? <img src={Up} alt="icon" /> : <img src={Down} alt="icon" />}
       </button>
     </div>
   );
