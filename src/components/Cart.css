@@ -11,6 +11,7 @@
   padding: 102.5px 0;
 }
 .cartItemCont {
+  height: 42rem;
   padding-right: 2rem;
   overflow-y: scroll;
 }

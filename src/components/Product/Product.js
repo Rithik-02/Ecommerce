@@ -17,7 +17,12 @@ export default function Product() {
         ? filteredData.map((data) => (
             <div className="productCard" key={data.id}>
               <img src={data.img} className="homeProdImg" alt="productImg" />
-              <p className="productName">{data.name}</p>
+              <p className="productName">
+                {data.name.length > 42
+                  ? `${data.name.substring(0, 42)}...`
+                  : data.name}
+              </p>
+
               <p className="productPrice">${data.price}</p>
               <a
                 className="productbuyNowHomeBtn"
@@ -30,7 +35,12 @@ export default function Product() {
         : ProductData.map((data) => (
             <div className="productCard" key={data.id}>
               <img src={data.img} className="homeProdImg" alt="productImg" />
-              <p className="productName">{data.name}</p>
+              <p className="productName">
+                {data.name.length > 42
+                  ? `${data.name.substring(0, 42)}...`
+                  : data.name}
+              </p>
+
               <p className="productPrice">${data.price}</p>
               <a
                 className="productbuyNowHomeBtn"

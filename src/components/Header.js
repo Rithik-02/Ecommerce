@@ -29,28 +29,23 @@ export default function Header() {
       </div>
       <img src={Menu} className="menuBtn" onClick={toggleMenu} alt="icon" />
       <nav className={`navigation ${menuOpen ? "menu-open" : ""}`}>
-        <Link to="/" className="navLink" onClick={toggleMenu}>
+        <Link to="/" className="navLink">
           Home
         </Link>
-
-        <a className="navLink" href="#footer" onClick={toggleMenu}>
+        <a className="navLink" href="#footer">
           Contact Us
         </a>
-        <Link className="navLink" to="/product" onClick={toggleMenu}>
+        <Link className="navLink" to="/product">
           Products
         </Link>
-        <a className="navLink" href="#" onClick={toggleMenu}>
+        <a className="navLink" href="#">
           About
         </a>
-        <div className="headerIcon" onClick={toggleMenu}>
+        <div className="headerIcon">
           <span>
             {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
           </span>
-          <Link
-            to="/cart"
-            style={{ textDecoration: "none" }}
-            onClick={toggleMenu}
-          >
+          <Link to="/cart" style={{ textDecoration: "none" }}>
             <span className="countCart">
               {menuOpen ? "Cart" : <img src={Cart} alt="icon" />}
               {count === 0 ? "" : <span className="countIcon">{count}</span>}
