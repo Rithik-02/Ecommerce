@@ -4,6 +4,14 @@
   gap: 6rem;
   padding: 7.2rem;
 }
+.payitems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 30rem;
+  overflow-y: scroll;
+  width: 43rem;
+}
 .summary {
   width: 45rem;
   display: flex;
@@ -141,10 +149,15 @@
   font-size: 16px;
   color: #333;
 }
+
 @media (max-width: 770px) {
+  .payitems {
+    width: 30rem;
+  }
   .paymentContainer {
     gap: 4rem;
     padding: 3.6rem;
+    align-items: center;
   }
   .summary {
     width: 33rem;

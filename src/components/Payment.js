@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Payment.css";
-
 import Card from "../assets/Pay/Credit.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 export default function Payment() {
   const paymentAddress = useSelector((state) => state.cart.address);
   const payItems = useSelector((state) => state.cart.products);
@@ -52,14 +52,15 @@ export default function Payment() {
     <div className="paymentContainer">
       <div className="summary">
         <p>Summary</p>
-        {payItems.map((items, id) => (
-          <div className="addedItems" key={id}>
-            <img src={items.img} />
-            <p>{items.name}</p>
-            <p>${items.price}</p>
-          </div>
-        ))}
-
+        <div className="payitems">
+          {payItems.map((items, id) => (
+            <div className="addedItems" key={id}>
+              <img src={items.img} />
+              <p>{items.name}</p>
+              <p>${items.price}</p>
+            </div>
+          ))}
+        </div>
         <p className="payHead">Address</p>
         <p className="paySubHead">
           {`${paymentAddress.street}, ${paymentAddress.city}, ${paymentAddress.zipCode}`}
