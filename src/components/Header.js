@@ -29,30 +29,36 @@ export default function Header() {
       </div>
       <img src={Menu} className="menuBtn" onClick={toggleMenu} alt="icon" />
       <nav className={`navigation ${menuOpen ? "menu-open" : ""}`}>
-        <Link to="/" className="navLink">
+        <Link to="/" className="navLink" onClick={toggleMenu}>
           Home
         </Link>
 
-        <a className="navLink" href="#footer">
+        <a className="navLink" href="#footer" onClick={toggleMenu}>
           Contact Us
         </a>
-        <Link className="navLink" to="/product">
+        <Link className="navLink" to="/product" onClick={toggleMenu}>
           Products
         </Link>
-        <a className="navLink" href="#">
+        <a className="navLink" href="#" onClick={toggleMenu}>
           About
         </a>
-        <div className="headerIcon">
+        <div className="headerIcon" onClick={toggleMenu}>
           <span>
             {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
           </span>
-          <Link to="/cart" style={{ textDecoration: "none" }}>
+          <Link
+            to="/cart"
+            style={{ textDecoration: "none" }}
+            onClick={toggleMenu}
+          >
             <span className="countCart">
               {menuOpen ? "Cart" : <img src={Cart} alt="icon" />}
               {count === 0 ? "" : <span className="countIcon">{count}</span>}
             </span>
           </Link>
-          <span>{menuOpen ? "Account" : <img src={User} alt="icon" />}</span>
+          <span onClick={toggleMenu}>
+            {menuOpen ? "Account" : <img src={User} alt="icon" />}
+          </span>
         </div>
       </nav>
     </div>
