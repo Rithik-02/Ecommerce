@@ -27,3 +27,12 @@
 .check {
   transform: scale(1.5);
 }
+@media (max-width: 425px) {
+  .buildHead {
+    font-size: 1.5rem;
+  }
+
+  .memoryList > label {
+    font-size: 1rem;
+  }
+}

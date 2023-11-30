@@ -23,7 +23,7 @@ export default function ProductPage() {
           <img src={FilterIcon} alt="fitlerIcon" />
         </div>
         <div className={`${isFilteropen ? "open" : "filterComponent "}`}>
-          <Filter />
+          <Filter filterHandler={filterHandler} />
         </div>
         <div className="productComponent">
           <Product />

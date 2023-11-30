@@ -8,7 +8,7 @@ import SizeFilter from "./SizeFilter";
 import { useDispatch, useSelector } from "react-redux";
 import { allFilteredData } from "../../Redux/Slice";
 
-const PriceFilter = () => {
+const PriceFilter = (props) => {
   const [isPriceDropdownOpen, setIsPriceDropdownOpen] = useState(true);
   const [fromPrice, setFromPrice] = useState("");
   const [toPrice, setToPrice] = useState("");
@@ -17,7 +17,7 @@ const PriceFilter = () => {
   const brandName = useSelector((state) => state.cart.brandData);
   const sizeDetails = useSelector((state) => state.cart.sizeData);
 
-  const togglePriceDropdown = () => {
+  const togglePriceDropdown = (props) => {
     setIsPriceDropdownOpen(!isPriceDropdownOpen);
   };
 
@@ -47,7 +47,7 @@ const PriceFilter = () => {
 
       filteredData = ProductData.filter(sizeFilterCondition);
     }
-
+    props.filterHandler(props.onClick);
     dispatch(allFilteredData(filteredData));
   };
 

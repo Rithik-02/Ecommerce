@@ -29,3 +29,12 @@
   flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 425px) {
+  .brandList > label {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .brandHead {
+    font-size: 1.5rem;
+  }
+}

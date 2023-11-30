@@ -61,5 +61,29 @@
   justify-content: center;
   margin-top: 4rem;
 }
-@media (max-width: 430px) {
+@media (max-width: 425px) {
+  .priceHead {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .price-dropdown {
+    font-size: 1.5rem;
+  }
+  .fromInput > p,
+  .toInput > p {
+    font-size: 1rem;
+  }
+  .inputPrice {
+    width: 10rem;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .applyBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
 }
