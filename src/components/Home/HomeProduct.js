@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./HomeProduct.css";
 import { HomeProductData } from "../../data/HomeProductData";
+import { Link } from "react-router-dom";
 
 export default function HomeProduct() {
   const [selectedHeading, setSelectedHeading] = useState(0);
@@ -42,7 +43,9 @@ export default function HomeProduct() {
             <img src={data.img} className="homeProdImg" alt="product" />
             <p className="homeProductName">{data.name}</p>
             <p className="homeProductPrice">${data.price}</p>
-            <a className="buyNowHomeBtn">Add to Cart</a>
+            <Link to="/product" className="buyNowHomeBtn">
+              Go to Product
+            </Link>
           </div>
         ))}
       </div>

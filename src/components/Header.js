@@ -46,7 +46,7 @@ export default function Header() {
           <span>
             {menuOpen ? "Wishlist" : <img src={Favourite} alt="icon" />}
           </span>
-          <Link to="/cart">
+          <Link to="/cart" style={{ textDecoration: "none" }}>
             <span className="countCart">
               {menuOpen ? "Cart" : <img src={Cart} alt="icon" />}
               {count === 0 ? "" : <span className="countIcon">{count}</span>}
