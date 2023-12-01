@@ -8,12 +8,14 @@ import ProductDetails from "./components/Product Details/ProductDetails";
 import Cart from "./components/Cart";
 import Address from "./components/Address";
 import Payment from "./components/Payment";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<ProductPage />} />

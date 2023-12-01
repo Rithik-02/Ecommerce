@@ -168,7 +168,7 @@
 @media (max-width: 425px) {
   .cart {
     flex-direction: column;
-    padding: 4rem 0.5rem;
+    padding: 4rem 1.3rem;
     align-items: center;
   }
   .cartItemDetails > p {
@@ -176,5 +176,9 @@
   }
   .cartEmptyText {
     font-size: 3rem;
+  }
+  .cartItemCont {
+    height: auto;
+    max-height: 42rem;
   }
 }

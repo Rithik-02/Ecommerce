@@ -109,4 +109,7 @@
     justify-content: center;
     gap: 2rem;
   }
+  .buyNowHomeBtn {
+    width: 10rem;
+  }
 }
