@@ -61,7 +61,7 @@ export const ProductData = [
     img: SamWat,
     name: "Samsung Galaxy Watch 6 Classic 47mm Black",
     id: 19,
-    price: "369",
+    price: 369,
   },
   {
     id: 8,
@@ -96,13 +96,13 @@ export const ProductData = [
     id: 13,
     img: Watch,
     name: "Apple Watch Series 9 GPS 41mm Starlight Aluminium Case",
-    price: "399",
+    price: 399,
   },
   {
     img: SamsungPhone,
     name: "Samsung Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
     id: 17,
-    price: "1799",
+    price: 1799,
   },
   {
     id: 16,
